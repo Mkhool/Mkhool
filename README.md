@@ -6,6 +6,10 @@
 
 - 🔭 I’m currently working on [Unity Quest](https://github.com/Mkhool/DaoCommunityGamingDapp)
 
+- 🤝 Let's Collaborate: Eager to contribute to Web3 projects or assist others.
+
+- 🔭 Open to work: Seeking exciting blockchain ventures.
+
 - 🌱 I’m currently learning **Foundry**
 
 - 👨‍💻 All of my projects are available at [https://github.com/Mkhool](https://github.com/Mkhool)
