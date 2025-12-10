@@ -4,26 +4,27 @@ on:
   # Génération automatique tous les jours à minuit
   schedule:
     - cron: "0 0 * * *"
-  # Permet de lancer manuellement depuis l’onglet Actions
+  # Lancer manuellement depuis l’onglet Actions
   workflow_dispatch:
+
+permissions:
+  contents: write   # <- important pour pouvoir écrire metrics.svg
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # Le fichier généré
           filename: metrics.svg
-
-          # Token GitHub stocké dans les secrets
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # Configuration de base (GitHub)
+          # Config de base GitHub
           base: header, activity, repositories, metadata
           config_timezone: Europe/Paris
 
-          # Activation du plugin GitLab
+          # GitLab
           plugin_gitlab: yes
           plugin_gitlab_token: ${{ secrets.GITLAB_TOKEN }}
-          plugin_gitlab_user: "senjosakki1"
+          plugin_gitlab_user: "senjosakki1"  # remplace ici
