@@ -2,7 +2,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=mkhool&label=Profile%20views&color=0e75b6&style=flat" alt="mkhool" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=mkhool" alt="mkhool" /></a> </p>
+
 
 - 🔭 I’m currently working on [Unity Quest](https://github.com/Mkhool/DaoCommunityGamingDapp)
 
