@@ -34,6 +34,7 @@
 
 ### 📊 Global Dev Activity
 
-![Metrics](./metrics.svg)
+![Metrics](https://github.com/Mkhool/Mkhool/raw/main/metrics.svg?ver=2)
+
 
 
