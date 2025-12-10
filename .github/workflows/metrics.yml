@@ -1,14 +1,12 @@
 name: Metrics
 
 on:
-  # Génération automatique tous les jours à minuit
   schedule:
-    - cron: "0 0 * * *"
-  # Lancer manuellement depuis l’onglet Actions
-  workflow_dispatch:
+    - cron: "0 0 * * *"   # tous les jours à minuit
+  workflow_dispatch:       # exécution manuelle
 
 permissions:
-  contents: write   # <- important pour pouvoir écrire metrics.svg
+  contents: write          # nécessaire pour écrire metrics.svg
 
 jobs:
   github-metrics:
@@ -17,14 +15,23 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          filename: metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          filename: metrics.svg
 
-          # Config de base GitHub
+          # Base GitHub
           base: header, activity, repositories, metadata
           config_timezone: Europe/Paris
 
-          # GitLab
-          plugin_gitlab: yes
-          plugin_gitlab_token: ${{ secrets.GITLAB_TOKEN }}
-          plugin_gitlab_user: "senjosakki1"  # remplace ici
+          # Quelques plugins utiles (tous pure GitHub)
+          plugin_languages: yes
+          plugin_languages_ignored: >-
+            html, css, scss
+          plugin_languages_details: percentage
+          plugin_languages_limit: 8
+
+          plugin_lines: yes
+          plugin_lines_history_limit: 1
+
+          plugin_stargazers: yes
+          plugin_stargazers_charts: yes
+          plugin_stargazers_worldmap: no
